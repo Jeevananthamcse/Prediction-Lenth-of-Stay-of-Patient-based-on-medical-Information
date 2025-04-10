@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length of Stay Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {box-sizing: border-box;}
+
+        body { 
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .logo {
+            width: 150px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .title {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+            flex: 1; /* Take up remaining space */
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 10px 0;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 20px;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .content h2 {
+            margin-top: 0;
+        }
+
+        .content p {
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mb-3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-left, .footer-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .footer-left p, .footer-right p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .footer-right a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .footer-right a:hover {
+            text-decoration: underline;
+        }
+    </style>
+	
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        <h1 class="title">Predicting Patient Length of Stay (LoS) in Hospitals</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="/">Predict</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Introduction</h2>
+        <p>Hospitals and healthcare facilities often struggle with efficiently managing resources and planning patient care due to variability in patient Length of Stay (LoS). Accurately predicting the LoS for patients can lead to better resource allocation, improved patient management, and reduced operational costs. Despite advancements in medical technology and data collection, there is a need for a more refined model that integrates diverse data sources to improve prediction accuracy.</p>
+
+        <h2>Objective</h2>
+        <p>To develop a machine learning regression model that predicts the Length of Stay (LoS) for patients based on their medical history, demographics, and other relevant factors. The goal is to create a model that helps hospitals forecast patient discharge times more accurately, thereby optimizing bed management and resource allocation.</p>
+    </div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	    <footer>
+        <div class="footer-left">
+            <p>Devlopers:</p>
+            <p>Prabu P</p>
+            <p>Jeevanantham</p>
+            <p>EMAIL: jeevatechspark@gmail.com</p>
+        </div>
+        <div class="footer-right">
+            <b>Connect:</b>
+            <p><a href="https://www.linkedin.com/in/jeevananthamp95 "_blank">Linkedin</a></p>
+        </div>
+    </footer>
+</body>
+</html>
